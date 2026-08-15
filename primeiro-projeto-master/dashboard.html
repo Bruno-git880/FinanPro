@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinanPro | Painel de Controle</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="index.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="dashbord.js" defer></script>
+</head>
+
+<body class="bg-black-theme min-vh-100">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black-nav border-bottom border-dark-subtle">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fa-solid fa-chart-line text-green me-2"></i>Finan<span class="text-green">Pro</span>
+      </a>
+      <div class="ms-auto d-flex gap-2">
+        <a href="login.html" class="btn btn-outline-light-custom btn-sm">Fazer Login</a>
+        <a href="cadastro.html" class="btn btn-green-action btn-sm fw-bold">Salvar Dados (Criar Conta)</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h1 class="h3 fw-bold text-white mb-1">Visão Geral das Finanças</h1>
+        <p class="text-muted-custom mb-0">Resumo financeiro demonstrativo em tempo real</p>
+      </div>
+    </div>
+
+<div class="row g-4 mb-4">
+
+  <div class="col-12 col-md-4">
+    <div class="card custom-card-dark p-3">
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <div>
+          <span class="text-muted-custom small">Receita Total</span>
+          <h3 class="fw-bold text-green mb-0" id="cardReceitas">R$ 0,00</h3>
+        </div>
+        <div class="feature-icon icon-green d-flex align-items-center justify-content-center">
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4">
+    <div class="card custom-card-dark p-3">
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <div>
+          <span class="text-muted-custom small">Despesas do Mês</span>
+          <h3 class="fw-bold text-red mb-0" id="cardDespesas">R$ 0,00</h3>
+        </div>
+        <div class="feature-icon icon-red d-flex align-items-center justify-content-center">
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4">
+    <div class="card custom-card-dark p-3">
+      <div class="card-body d-flex align-items-center justify-content-between">
+        <div>
+          <span class="text-muted-custom small">Saldo Atual</span>
+          <h3 class="fw-bold text-white mb-0" id="cardSaldo">R$ 0,00</h3>
+        </div>
+        <div class="feature-icon icon-green d-flex align-items-center justify-content-center">
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+    <div class="card custom-card-dark p-4 mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="fw-bold text-white mb-0">Lançamentos Recentes</h5>
+        <div class="d-flex gap-2">
+          <button id="btnLimparDados" class="btn btn-outline-red btn-sm fw-bold">
+            <i class="fa-solid fa-trash-can me-1"></i> Limpar Dados
+          </button>
+          <button class="btn btn-green-action btn-sm fw-bold" data-bs-toggle="modal" data-bs-target="#modalNovaTransacao">
+            <i class="fa-solid fa-plus me-1"></i> Nova Transação
+          </button>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle mb-0">
+          <thead>
+  <tr class="text-muted-custom border-bottom border-dark-subtle">
+    <th>Descrição</th>
+    <th>Categoria</th>
+    <th>Data</th>
+    <th class="text-end">Valor</th>
+    <th class="text-end">Ação</th>
+  </tr>
+</thead>
+          <tbody id="tabelaTransacoes">
+            <tr>
+              <td class="text-white"><i class="fa-solid fa-briefcase text-green me-2"></i>Salário Mensal</td>
+              <td><span class="badge bg-dark text-muted-custom border border-secondary">Receita</span></td>
+              <td class="text-muted-custom">05/08/2026</td>
+              <td class="text-end fw-bold text-green">+ R$ 12.450,00</td>
+            </tr>
+            <tr>
+              <td class="text-white"><i class="fa-solid fa-cart-shopping text-red me-2"></i>Supermercado</td>
+              <td><span class="badge bg-dark text-muted-custom border border-secondary">Alimentação</span></td>
+              <td class="text-muted-custom">08/08/2026</td>
+              <td class="text-end fw-bold text-red">- R$ 1.250,00</td>
+            </tr>
+            <tr>
+              <td class="text-white"><i class="fa-solid fa-bolt text-red me-2"></i>Conta de Luz</td>
+              <td><span class="badge bg-dark text-muted-custom border border-secondary">Contas</span></td>
+              <td class="text-muted-custom">10/08/2026</td>
+              <td class="text-end fw-bold text-red">- R$ 380,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col-12 col-lg-6 mx-auto">
+        <div class="card custom-card-dark p-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-white mb-3">
+              <i class="fa-solid fa-chart-pie text-green me-2"></i>Distribuição Financeira
+            </h5>
+            <div style="position: relative; height: 260px; width: 100%;">
+              <canvas id="graficoFinancas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal fade" id="modalNovaTransacao" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content auth-card border-dark-subtle">
+        <div class="modal-header border-bottom border-dark-subtle">
+          <h5 class="modal-title fw-bold text-white">Nova Transação</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formTransacao">
+            <div class="mb-3">
+              <label class="form-label text-white small fw-medium">Descrição</label>
+              <input type="text" id="transacaoDesc" class="form-control custom-input" placeholder="Ex: Mercado, Freelance" required>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-6">
+                <label class="form-label text-white small fw-medium">Tipo</label>
+                <select id="transacaoTipo" class="form-select custom-input">
+                  <option value="receita">Receita (+)</option>
+                  <option value="despesa">Despesa (-)</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label text-white small fw-medium">Valor (R$)</label>
+                <input type="number" id="transacaoValor" step="0.01" class="form-control custom-input" placeholder="0,00" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-green-action w-100 fw-bold py-2 mt-2">Adicionar Transação</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

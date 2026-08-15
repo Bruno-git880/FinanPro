@@ -1,0 +1,20 @@
+{
+  "name": "primeiro-projeto-main",
+  "version": "1.0.0",
+  "description": "O **FinanPro** é uma aplicação web moderna e intuitiva para controle financeiro pessoal, projetada para ajudar os usuários a acompanhar receitas, despesas e saldo em tempo real com transparência e alta performance.",
+  "main": "dashbord.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "sqlite3": "^6.0.1"
+  }
+}
