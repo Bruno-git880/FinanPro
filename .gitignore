@@ -1,0 +1,28 @@
+# Dependências do Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de ambiente e chaves secretas (segurança)
+.env
+.env.local
+.env.development
+.env.production
+
+# Banco de dados local SQLite (evita sobrescrever dados reais no repositório)
+*.db
+*.sqlite
+*.sqlite3
+finanpro.db
+
+# Arquivos de sistema operacional e IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs e arquivos temporários
+*.log
+dist/
+build/
