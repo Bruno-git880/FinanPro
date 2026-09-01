@@ -1,0 +1,136 @@
+/* --- ESTILOS EXCLUSIVOS DO DASHBOARD --- */
+
+:root {
+  /* Pretos e Escuros */
+  --bg-black: #080808;
+  --bg-dark-card: #121212;
+  --bg-dark-border: #222222;
+  --bg-input: #1a1a1a;
+  
+  /* Verde (Receitas / Lucro) */
+  --accent-green: #10b981;
+  --accent-green-hover: #059669;
+  
+  /* Vermelho (Despesas / Alertas) */
+  --accent-red: #ef4444;
+  --accent-red-hover: #dc2626;
+  
+  /* Textos */
+  --text-white: #ffffff;
+  --text-muted: #a1a1aa;
+}
+
+body.bg-black-theme {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-black);
+  color: var(--text-white);
+}
+
+/* --- CARDS DE MÉTRICAS --- */
+.custom-card-dark {
+  background-color: var(--bg-dark-card);
+  border: 1px solid var(--bg-dark-border);
+  border-radius: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.custom-card-dark:hover {
+  transform: translateY(-3px);
+  border-color: #333333;
+}
+
+/* Ícones de métricas */
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+}
+
+.icon-green {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: var(--accent-green);
+}
+
+.icon-red {
+  background-color: rgba(239, 68, 68, 0.12);
+  color: var(--accent-red);
+}
+
+/* --- TABELA DE LANÇAMENTOS --- */
+.table-responsive {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-dark-border) var(--bg-dark-card);
+}
+
+.table-dark {
+  --bs-table-bg: transparent;
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.03);
+  color: var(--text-white);
+}
+
+.table-dark th {
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 12px;
+}
+
+.table-dark td {
+  padding: 16px 12px;
+  border-color: var(--bg-dark-border);
+  font-size: 14px;
+}
+
+/* Badges da Tabela */
+.badge.bg-dark {
+  background-color: var(--bg-input) !important;
+  font-weight: 500;
+}
+
+/* --- MODAL E FORMULÁRIOS --- */
+.modal-content.auth-card {
+  background-color: var(--bg-dark-card);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.custom-input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--bg-dark-border);
+  color: var(--text-white);
+  padding: 10px 12px;
+}
+
+.custom-input:focus {
+  background-color: var(--bg-input);
+  border-color: var(--accent-green);
+  color: var(--text-white);
+  box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.15);
+}
+
+.custom-input option {
+  background-color: var(--bg-dark-card);
+  color: var(--text-white);
+}
+
+/* --- UTILITÁRIOS DE COR --- */
+.text-green { color: var(--accent-green) !important; }
+.text-red { color: var(--accent-red) !important; }
+.text-muted-custom { color: var(--text-muted); }
+
+/* Botões */
+.btn-green-action {
+  background-color: var(--accent-green);
+  color: #000000;
+  border: none;
+}
+
+.btn-green-action:hover {
+  background-color: var(--accent-green-hover);
+  color: #ffffff;
+}
+
+.border-green {
+  border: 2px solid #10b981 !important;
+}

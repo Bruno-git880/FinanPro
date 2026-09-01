@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinanPro | Gestão Financeira Inteligente</title>
+  
+  <!-- Fonte Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Estilos Próprios -->
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-black-theme">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black-nav sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="fa-solid fa-chart-line text-green me-2"></i>Finan<span class="text-green">Pro</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Segurança</a></li>
+          <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="login.html" class="btn btn-outline-light-custom">Entrar</a>
+          <a href="cadastro.html" class="btn btn-green-action fw-bold">Criar Conta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+<header class="hero-section d-flex align-items-center">
+  <div class="container text-center py-5">
+    <span class="badge badge-red-subtle px-3 py-2 rounded-pill mb-3">
+      <i class="fa-solid fa-fire me-1"></i> Nova Categoria de Controle
+    </span>
+    <h1 class="display-4 fw-extrabold text-white mb-3">
+      Domine suas finanças com <span class="text-green">lucratividade real</span>
+    </h1>
+    <p class="lead text-muted-custom col-lg-8 mx-auto mb-4">
+      Elimine gastos desnecessários, acompanhe seus rendimentos e alcance suas metas financeiras com velocidade.
+    </p>
+    <div class="d-sm-flex justify-content-center gap-3">
+      <!-- Botão alterado: aponta diretamente para o painel de uso livre -->
+      <a href="dashboard.html" class="btn btn-green-action btn-lg fw-bold px-4 py-3 shadow-green">
+        Acessar Painel Demonstrativo <i class="fa-solid fa-gauge-high ms-2"></i>
+      </a>
+      <a href="demosntracao.html" class="btn btn-outline-red btn-lg px-4 py-3">Ver Demonstração</a>
+    </div>
+  </div>
+</header>
+
+  <!-- CARDS DE RECURSOS -->
+  <section id="recursos" class="py-5 bg-dark-section">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold text-white">Por que escolher o FinanPro?</h2>
+        <p class="text-muted-custom">Tudo o que você precisa para controlar seu patrimônio em um só lugar</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 custom-card-dark p-3">
+            <div class="card-body">
+              <div class="feature-icon icon-green mb-4 d-inline-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-chart-line fa-lg"></i>
+              </div>
+              <h5 class="card-title fw-bold text-white">Fluxo de Caixa Positivo</h5>
+              <p class="card-text text-muted-custom">Monitore suas entradas em tempo real e identifique imediatamente onde multiplicar seu capital.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 custom-card-dark p-3">
+            <div class="card-body">
+              <div class="feature-icon icon-red mb-4 d-inline-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
+              </div>
+              <h5 class="card-title fw-bold text-white">Corte de Gastos</h5>
+              <p class="card-text text-muted-custom">Alertas automáticos em vermelho sempre que uma categoria ultrapassar o orçamento limite estipulado.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 custom-card-dark p-3">
+            <div class="card-body">
+              <div class="feature-icon icon-green mb-4 d-inline-flex align-items-center justify-content-center">
+                <i class="fa-solid fa-shield-halved fa-lg"></i>
+              </div>
+              <h5 class="card-title fw-bold text-white">Segurança de Alto Nível</h5>
+              <p class="card-text text-muted-custom">Proteção máxima com dados criptografados e controle total de acessos à sua conta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black-nav text-white-50 py-4 border-top border-dark-subtle">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2026 FinanPro. Projeto para portfólio GitHub.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
